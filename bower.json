@@ -1,0 +1,21 @@
+{
+  "name": "html5-boilerplate",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Viktor Dzundza <victor.dzundza.dev@gmail.com>"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/h5bp/html5-boilerplate/blob/master/LICENSE.txt"
+  },
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

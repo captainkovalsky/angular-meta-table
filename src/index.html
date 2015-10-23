@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="" data-ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="../bower_components/angular/angular.min.js"></script>
+
+</head>
+<body>
+<div class="content" ng-controller="TestController">
+    <button data-ng-click="setEdit()">set edit</button>
+    <div data-ng-foreach="row in rows track by $index">
+        <div data-adt-cell data-cell="cell" data-is-edit="{{isEdit}}" data-ng-foreach="cell in $parent.row">
+            <pre>{{cell | json}}</pre>
+        </div>
+    </div>
+</div>
+<script id="booleanView" type="text/ng-template">
+    <p>view {{cell.value === 'y' ? 'YES' : 'NO'}}</p>
+</script>
+<script id="booleanEditView" type="text/ng-template">
+    <p><input ng-model="cell.value" type="text" /></p>
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
